@@ -1,4 +1,3 @@
-import js from "@eslint/js";
 import globals from "globals";
 import json from "@eslint/json";
 import markdown from "@eslint/markdown";
@@ -14,6 +13,7 @@ export default defineConfig([
       globals: {
         ...globals.node,
         ...globals.jest,
+        ...globals.browser,
       },
     },
   },
