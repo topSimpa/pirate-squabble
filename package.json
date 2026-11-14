@@ -1,7 +1,41 @@
 {
     "scripts": {
-    "test-watcher": "jest --watch *.js",
-    "test": "jest",
-    "setup": "./setup.sh"
+        "test-watcher": "jest --watch *.js",
+        "test": "jest",
+        "setup": "./setup.sh"
+    },
+    "name": "pirate-squabble",
+    "version": "1.0.0",
+    "description": "",
+    "main": "",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/topSimpa/pirate-squabble.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "bugs": {
+        "url": "https://github.com/topSimpa/pirate-squabble/issues"
+    },
+    "homepage": "https://github.com/topSimpa/pirate-squabble#readme",
+    "devDependencies": {
+        "@babel/preset-env": "^7.29.14",
+        "@eslint/js": "^10.0.1",
+        "@eslint/json": "^2.1.1",
+        "@eslint/markdown": "^8.0.3",
+        "css-loader": "^7.1.5",
+        "eslint": "^10.15.0",
+        "gh-pages": "^6.3.0",
+        "globals": "^17.14.0",
+        "html-loader": "^5.1.0",
+        "html-webpack-plugin": "^5.6.8",
+        "jest": "^30.5.2",
+        "prettier": "^3.10.1",
+        "style-loader": "^4.0.0",
+        "webpack": "^5.112.2",
+        "webpack-cli": "^7.3.1",
+        "webpack-dev-server": "^6.1.0"
     }
 }
