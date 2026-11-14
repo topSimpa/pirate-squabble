@@ -6,6 +6,14 @@ if [ -f package-lock.json ]; then
 fi
 
 npm install -D \
+    webpack@latest \
+    webpack-cli@latest \
+    webpack-dev-server@latest \
+    html-webpack-plugin@latest \
+    style-loader@latest \
+    css-loader@latest \
+    html-loader@latest \
+    @babel/preset-env@^7 \
     eslint@latest \
     @eslint/js@latest \
     @eslint/json@latest \
@@ -13,7 +21,7 @@ npm install -D \
     globals@latest \
     prettier@latest \
     jest \
-    @babel/preset-env@^7
+    gh-pages@latest
 
 
 # Remove the "first-time setup" section from README so it never
