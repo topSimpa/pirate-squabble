@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "test-watcher": "jest --watch *.js",
+        "test-watcher": "jest --watch",
         "test": "jest",
         "setup": "./setup.sh"
     },
