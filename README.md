@@ -13,6 +13,12 @@ Before play begins, each player secretely arranges their ships. Check out more d
  A grid board that serves as water which the ships reside on. players ships are placed on 
  the board while the opponents try attacks on the ships by striking on the boards
 
+- **Player**
+ Users are players that interact with the game. This game has two types of player
+ - computer: a default second player 
+ - human: a human player
+
+ Each player should have their board
 
 ## Getting Started
 
