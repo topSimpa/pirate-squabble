@@ -3,7 +3,7 @@
 
 import Ship from "../models/ship.js";
 
-describe("testing if ship hit result in the rigth sideEffect", () => {
+describe("testing if ship hit, result in the rigth sideEffect", () => {
   const ship = new Ship(5);
 
   test("testing before any hit", () => {
