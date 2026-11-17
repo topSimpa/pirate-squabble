@@ -12,6 +12,10 @@ export default class Ship {
     return this.#hits;
   }
 
+  get length() {
+    return this.#length;
+  }
+
   hit() {
     this.#hits++;
   }
