@@ -2,6 +2,7 @@
 //test on the board that the game is played on
 
 import WaterBoard from "../models/waterBoard.js";
+import { SHIP_ORIENTATION } from "../constant.js";
 
 const makeMockShip = (length, sunk = false) => {
   return {
@@ -10,6 +11,35 @@ const makeMockShip = (length, sunk = false) => {
     isSunk: jest.fn(() => sunk),
   };
 };
+
+describe("board can have ships place in them", () => {
+  const shortShip = makeMockShip(1);
+  const longShip = makeMockShip(3);
+
+  test("placing a short Ship works", () => {
+    const board = new WaterBoard();
+    board.placeShip(shortShip, [4, 4]);
+    expect(board.board[4][4].ship).toMatchObject(shortShip);
+  });
+
+  test("placing a long ship works horizontal", () => {
+    const board = new WaterBoard();
+    board.placeShip(longShip, [4, 7], SHIP_ORIENTATION.hor);
+
+    expect(board.board[4][7].ship).toMatchObject(longShip);
+    expect(board.board[4][8].ship).toMatchObject(longShip);
+    expect(board.board[4][9].ship).toMatchObject(longShip);
+  });
+
+  test("placing a long ship vertically", () => {
+    const board = new WaterBoard();
+    board.placeShip(longShip, [4, 7], SHIP_ORIENTATION.vert);
+
+    expect(board.board[4][7].ship).toMatchObject(longShip);
+    expect(board.board[5][7].ship).toMatchObject(longShip);
+    expect(board.board[6][7].ship).toMatchObject(longShip);
+  });
+});
 
 describe("board can handle recieve attack", () => {
   const board = new WaterBoard();

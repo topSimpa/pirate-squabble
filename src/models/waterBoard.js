@@ -1,4 +1,7 @@
 //waterBoard.js
+//Grid board where player places ships and attack opponents.
+
+import { SHIP_ORIENTATION } from "../constant.js";
 
 class Cell {
   constructor(x, y) {
@@ -43,14 +46,37 @@ export default class WaterBoard {
     return true;
   }
 
-  placeShip(ship, start) {
-    let colIndex = start[1];
-    const rowIndex = start[0];
+  placeShip(ship, start, orient = SHIP_ORIENTATION.hor) {
+    const placeHor = (ship, start) => {
+      const rowIndex = start[0];
+      const stop = ship.length + start[1];
+      let colIndex = start[1];
 
-    while (colIndex < ship.length + start[1]) {
-      this.board[rowIndex][colIndex].ship = ship;
-      colIndex++;
+      while (colIndex < stop) {
+        this.board[rowIndex][colIndex].ship = ship;
+        colIndex++;
+      }
+    };
+
+    const placeVert = (ship, start) => {
+      const colIndex = start[1];
+      const stop = ship.length + start[1];
+      let rowIndex = start[0];
+
+      while (rowIndex < stop) {
+        this.board[rowIndex][colIndex].ship = ship;
+        rowIndex++;
+      }
+    };
+
+    switch (orient) {
+      case SHIP_ORIENTATION.hor:
+        placeHor(ship, start);
+        break;
+      case SHIP_ORIENTATION.vert:
+        placeVert(ship, start);
     }
+
     this.#boardShips.push(ship);
   }
 

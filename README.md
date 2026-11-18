@@ -1,24 +1,28 @@
 # `Pirate-Squabble`
 
-This project is a web version game based of the classic game `BattleShip` game, with a theme of fighting pirates' ships. The game is traditionally played on four grids, two for each player. The grids are typically square, usually 10 * 10, and the individual squares in the grid are Identified by letter and number. On one grid the player arranges the ships and records the shots by opponent. On the other grid, the player records their own shots. 
+This project is a web version game based of the classic game `BattleShip` game, with a theme of fighting pirates' ships.  
+The game is traditionally played on four grids, two for each player.  
+The grids are typically square, usually 10 * 10, and the individual squares in the grid are Identified by letter and number.  
+On one grid the player arranges the ships and records the shots by opponent. On the other grid, the player records their own shots. 
 
-Before play begins, each player secretely arranges their ships. Check out more details about game [here](https://en.wikipedia.org/wiki/Battleship_(game)#:~:text=Descriptionedit)
+Before play begins, each player secretely arranges their ships.  
+Check out more details about game [here](https://en.wikipedia.org/wiki/Battleship_(game)#:~:text=Descriptionedit)
 
 ## Requirement & Features
-- **Ships**
+- **Ships:**  
  They are the primary game object here, they have specific length and can be sunk by
- a hit from an attack on the water-board
+ seried of hit from an attack on the water-board by the opponent.
 
-- **WaterBoard**
+- **WaterBoard:**  
  A grid board that serves as water which the ships reside on. players ships are placed on 
- the board while the opponents try attacks on the ships by striking on the boards
+ the board while the opponents try attacks on the ships by striking on the boards.
 
-- **Player**
+- **Player:**  
  Users are players that interact with the game. This game has two types of player
- - computer: a default second player 
- - human: a human player
-
- Each player should have their board
+  - computer: a default second player 
+  - human: a human player
+  
+  &nbsp; Each player should have their board
 
 ## Getting Started
 
