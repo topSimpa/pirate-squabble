@@ -3,9 +3,10 @@
 import WaterBoard from "./waterBoard.js";
 
 export default class Player {
-  constructor(type) {
+  constructor(type, waterBoard, id) {
+    this.id = id;
     this.type = type;
-    this.board = new WaterBoard();
+    this.waterBoard = waterBoard;
   }
 }
 

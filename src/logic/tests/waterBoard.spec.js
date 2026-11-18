@@ -47,8 +47,8 @@ describe("board can handle recieve attack", () => {
 
   board.placeShip(mockShip, [1, 0]);
 
-  test("receiving first attacks", () => {
-    board.receiveAttack(1, 0);
+  test("receiving first hit attacks", () => {
+    expect(board.receiveAttack(1, 0)).toBe(true);
     expect(mockShip.hit).toHaveBeenCalledTimes(1);
   });
 
@@ -63,8 +63,8 @@ describe("board can handle recieve attack", () => {
     expect(mockShip.hit).toHaveBeenCalledTimes(3);
   });
 
-  test("attack is a miss, does board record it", () => {
-    board.receiveAttack(1, 3);
+  test("attack is a miss", () => {
+    expect(board.receiveAttack(1, 3)).toBe(false);
     expect(board.board[1][3].active).toBe(false);
   });
 });

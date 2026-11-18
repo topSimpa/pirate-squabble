@@ -85,8 +85,11 @@ export default class WaterBoard {
     if (cell.active && cell.ship) {
       const ship = cell.ship;
       ship.hit();
+      cell.active = false;
+      return true;
     }
 
     cell.active = false;
+    return false;
   }
 }
